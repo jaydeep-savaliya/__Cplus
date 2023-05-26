@@ -1,0 +1,1 @@
+{"name":"Local: prefix","url":"d:\\c++\\prefix.cpp","tests":[{"id":1675314762334,"input":"3\nfast faster farmer","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\c++\\prefix.cpp","group":"local","local":true}
