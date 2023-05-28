@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-    map<int,int> m;
-    int n;
-    cin>>n;
-    int arr[n];
+    map<char,int> m;
+    int n=5;
+    // cin>>n;
+    char arr[n]={'1','2','3','4','5'};
     for(int i=0;i<n;i++){
-        cin>>arr[i];
+        // cin>>arr[i];
         m[arr[i]]++;
     }
     int a=0;
