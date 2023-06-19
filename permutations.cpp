@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 void permutations(int i,vector<int>& v,vector<vector<int>>& ans){
     int n = v.size();
     if(i==n-1){
