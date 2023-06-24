@@ -1,57 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
-bool check(string t){
-    if(t == "/" || t == "+" || t == "*" || t == "-"){
-        return true;
-    }
-    return false;
-}
-int evalRPN(vector<string> &A){
-    stack<string> st;
-    for(int i=A.size()-1;i>=0;i--){
-        if(check(A[i])){
-            st.push(A[i]);
-        }else{
-            if(st.empty()){
-                return stoi(A[i]);
+
+int evalRPN(vector<string> &tokens){
+    unordered_set<string> symbols = {"+","-","*","/"};
+        stack<long> st;
+        for(int i=0;i<tokens.size();i++){
+            if(symbols.find(tokens[i])==symbols.end()){
+                st.push(stol(tokens[i]));
             }
-        if(check(st.top())){
-            st.push(A[i]);
-        }else{
-            st.push(A[i]);
-            while(!check(st.top())){
-                int a = stoi(st.top());
-                st.pop();
-                if(st.empty() || check(st.top())){
-                    st.push(to_string(a));
-                    break;
-                }
-                int b = stoi(st.top());
-                st.pop();
-                string op = st.top();
-                st.pop();
-                int p;
-                if(op == "*"){
-                    p = a*b;
-                }
-                else if(op == "-"){
-                    p = a-b;
-                }
-                else if(op == "+"){
-                    p = a+b;
-                }
-                else if(op == "/"){
-                    p = a/b;
-                }
-                st.push(to_string(p));
+            else{
+                long long temp=st.top();st.pop();
+                long long temp2=st.top();st.pop();
+                if(tokens[i]=="+") st.push(temp2+temp);
+                else if(tokens[i]=="-") st.push(temp2-temp);
+                else if(tokens[i]=="*") st.push(temp2*temp);
+                else st.push(temp2/temp);
             }
         }
-        }
-    }
-    return stoi(st.top());
+        return (int)st.top();
 }
 int main(){
-    vector<string> A{"2", "1", "+", "3", "*"};
+    vector<string> A{"10","6","9","3","+","-11","*","/","*","17","+","5","+"};
     int ans = evalRPN(A);
     cout<<ans;
 }

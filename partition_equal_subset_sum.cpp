@@ -17,6 +17,6 @@ int main(){
     }
     if(sum%2) cout<<false;
     dp.resize(n+1,vector<int>(sum/2+1,-1));
-    bool flag = subset(nums,0,sum/2);
-    cout<<flag<<endl;
+    bool ans = subset(nums,0,sum/2);
+    cout<<ans<<endl;
 }
