@@ -21,8 +21,8 @@ int f(int i,int t,vector<int>& coins,vector<vector<int>>&dp){
         else return -1;
     }
 int main(){
-    vector<int> coins{1,2,5};
-    int amount = 11;
+    vector<int> coins{1,2};
+    int amount = 9;
     int ans = coinChange(coins,amount);
     cout<<ans;
 }

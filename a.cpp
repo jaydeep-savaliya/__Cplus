@@ -4,7 +4,7 @@ int main(){
     vector<int> v={0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1};
     int k = 3;
     int i = 0;
-    int j = 0;
+    int j = 0; 
     int ans = INT_MIN;
     while(i<v.size() && j<v.size()){
         if(k!=0 || v[i]==1){

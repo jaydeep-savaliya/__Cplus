@@ -1,9 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int mod =(int)1e9+7;
-
-int countPartitionsUtil(int ind, int target, vector<int>& arr, vector<vector
-<int>> &dp){
+int countPartitionsUtil(int ind, int target, vector<int>& arr, vector<vector<int>> &dp){
 
      if(ind == 0){
         if(target==0 && arr[0]==0)
@@ -17,7 +15,6 @@ int countPartitionsUtil(int ind, int target, vector<int>& arr, vector<vector
         return dp[ind][target];
         
     int notTaken = countPartitionsUtil(ind-1,target,arr,dp);
-    
     int taken = 0;
     if(arr[ind]<=target)
         taken = countPartitionsUtil(ind-1,target-arr[ind],arr,dp);

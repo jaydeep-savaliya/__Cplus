@@ -16,8 +16,8 @@ int f(int idx,vector<int> &nums,int k,vector<int> &dp){
     return max_sum;
 }
 int main(){
-    vector<int> nums{1,15,7,9,2,5,10};
-    int k = 3;
+    vector<int> nums{1,4,1,5,7,3,6,1,9,9,3};
+    int k = 4;
     int n = nums.size();
     vector<int> dp(n,-1);
     cout<<f(0,nums,k,dp);

@@ -6,7 +6,7 @@ class node{
         node* next;
             node(int val){
                 data = val;
-                next =NULL;
+                next = NULL;
             }        
 };
 void insertAtTail(node* &head,int val){

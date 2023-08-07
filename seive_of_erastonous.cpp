@@ -2,7 +2,7 @@
 using namespace std;
 vector<int> sieveOfEratosthenes(int n){
     vector<bool> check(n+1,true);
-    for(int p=2;p*p<=n;p++){
+    for(int p=2;p<=n;p++){
         if(check[p]){
             for(int i=p*p;i<=n;i+=p){
                 check[i] = false;

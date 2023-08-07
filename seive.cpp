@@ -2,7 +2,7 @@
 using namespace std;
 int main(){
     vector<int> prime(50,1);
-    int n = 50;
+    int n = 10;
     for(int i=2;i<50;i++){
         if(prime[i]){
             for(int j=i*i;j<=n;j+=i){
