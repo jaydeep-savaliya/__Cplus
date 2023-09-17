@@ -8,9 +8,12 @@ int shortestPathLength(vector<vector<int>> &graph){
         q.push(tuple<int,int,int>(i,1<<i,0));
         seen[i][1<<i] = true;
     }
-    while (!q.empty())
+    while(!q.empty())
     {
-        auto [idx,mask,dist] = q.front();
+        tuple<int,int,int> tup = q.front();
+        int idx = get<0>(tup);
+        int mask = get<1>(tup);
+        int dist = get<2>(tup);
         q.pop();
         if(mask==(1<<n)-1){
             res = dist;
@@ -29,5 +32,5 @@ int shortestPathLength(vector<vector<int>> &graph){
 int main(){
     vector<vector<int>> graph{{1,2,3},{0},{0},{0}};
     int ans = shortestPathLength(graph);
-
+    cout<<ans;
 }

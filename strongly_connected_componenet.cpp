@@ -1,9 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-
-
-
 class Solution
 {
 private:
@@ -15,7 +11,6 @@ private:
                 dfs(it, vis, adj, st);
             }
         }
-
         st.push(node);
     }
 private:
@@ -28,7 +23,6 @@ private:
         }
     }
 public:
-    //Function to find number of strongly connected components in the graph.
     int kosaraju(int V, vector<int> adj[])
     {
         vector<int> vis(V, 0);
@@ -43,8 +37,6 @@ public:
         for (int i = 0; i < V; i++) {
             vis[i] = 0;
             for (auto it : adj[i]) {
-                // i -> it
-                // it -> i
                 adjT[it].push_back(i);
             }
         }
