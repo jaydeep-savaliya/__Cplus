@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 string reorganizeString(string s){
         vector<int> fre(26, 0);

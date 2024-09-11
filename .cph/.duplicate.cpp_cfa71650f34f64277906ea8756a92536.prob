@@ -1,1 +1,0 @@
-{"name":"Local: duplicate","url":"d:\\c++\\duplicate.cpp","tests":[{"id":1675786909629,"input":"5\n1 2 2 3 45","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\c++\\duplicate.cpp","group":"local","local":true}

@@ -1,27 +1,19 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
-
-void mergeSort(int[],int,int); 
-void merge(int[],int,int,int);
-
 void printArray(int arr[], int size){
     int i;
     for(i = 0; i < size; i++){
-        cout << arr[i] << " ";
+        cout<<arr[i]<<" ";
     }
-    cout << endl;
+    cout<<endl;
 }
-
-int main() 
-{
-    int array[]= {8, 4, 5, 1, 3, 9, 0, 2, 7, 6,10};
+int main(){
+    int array[]= {8, 4, 5, 1, 3, 9, 0, 2, 7, 6,10,125,0,-45,458};
     int i; 
     int size = sizeof(array)/sizeof(array[0]);
-    printArray(array, size);
     mergeSort(array, 0, size-1); 
     printArray(array, size);
 }
-
 void mergeSort(int a[], int left, int right){
     int mid;
     if(left < right)
@@ -42,7 +34,6 @@ void merge(int arr[], int left, int mid, int right)
         L[i] = arr[left + i];
     for (j = 0; j < n2; j++)
         R[j] = arr[mid + 1 + j];
-
     i = 0; 
     j = 0; 
     k = left; 

@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 vector<vector<int>> threesum(vector<int> test){
     sort(test.begin(),test.end());
     int n = test.size();
@@ -41,6 +40,7 @@ int main(){
         test.push_back(arr[i]);
     }
     vector<vector<int>> output = threesum(test);
+    
    for(int i=0;i<output.size();i++){
     for(auto j=output[i].begin();j!=output[i].end();j++){
         cout<<*j<<" ";

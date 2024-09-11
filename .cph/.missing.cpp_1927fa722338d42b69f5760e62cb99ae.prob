@@ -1,1 +1,0 @@
-{"name":"Local: missing","url":"d:\\c++\\missing.cpp","tests":[{"id":1675786242356,"input":"6\n1 2 3 6 5 7","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\c++\\missing.cpp","group":"local","local":true}

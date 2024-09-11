@@ -1,1 +1,0 @@
-{"name":"Local: substring","url":"d:\\c++\\substring.cpp","tests":[{"id":1675329566830,"input":"jaydip","output":"NO"},{"id":1675329839581,"input":"abcabc","output":"YES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\c++\\substring.cpp","group":"local","local":true}

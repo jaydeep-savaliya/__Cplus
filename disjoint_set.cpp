@@ -28,6 +28,7 @@ class DisjointSet{
 };
 int main(){
     DisjointSet ds(7);
+    priority_queue<vector<int>,greater<int> >
     ds.UnionByRank(1,2);
     ds.UnionByRank(2,3);
     return 0;

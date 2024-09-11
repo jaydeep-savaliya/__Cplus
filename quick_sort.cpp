@@ -17,7 +17,7 @@ int partition (int array[], int low, int high){
             swap(&array[swapIndex], &array[j]); 
         } 
     } 
-    swap(&array[swapIndex + 1], &array[high]); 
+    swap(array[swapIndex + 1], array[high]); 
     return (swapIndex + 1); 
 } 
 void quickSort(int array[], int low, int high) 
@@ -39,10 +39,7 @@ int main()
 { 
     int array[] = {7, 9, 1, 3, 5, 2, 6, 0, 4, 8}; 
     int size = sizeof(array)/sizeof(array[0]);
-    cout<<"Before Sorting: \n";
-    display(array, size);
     quickSort(array, 0, size-1); 
-    cout<<"\nAfter Sorting: \n"; 
     display(array, size);    
     return 0; 
 }

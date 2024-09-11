@@ -28,6 +28,5 @@ int main()
     }
     cout << "After Insertion sort: \n"; 
     display(array, size);
-    
     return 0; 
 }

@@ -17,10 +17,9 @@ int main(){
     vector<int> v={1,2,3};
     vector<vector<int>> ans;
     permutations(0,v,ans);
-    
     for(int i=0;i<ans.size();i++){
         for(int j = 0;j<ans[i].size();j++){
-            
+            cout<<ans[i][j];
         }
     }
 }
